@@ -25,7 +25,9 @@ class Graph(object):
                 self.vertices.add(Vertex(value))
                 start_vx = Vertex(key) 
                 end_vx = Vertex(value)
-                if not ((start_vx, end_vx) in self.edges or (end_vx,start_vx) in self.edges):
+                if Edge(start_vx, end_vx) in self.edges:
+                    pass
+                else:
                     self.edges.append(Edge(start_vx, end_vx))
                 
             

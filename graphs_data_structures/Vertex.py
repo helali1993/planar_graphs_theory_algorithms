@@ -3,7 +3,7 @@
 
 class Vertex(object):
 
-    def __init__(self, name) -> None:
+    def __init__(self, name = None) -> None:
         self.name = name
         self.neighbours = []
 
