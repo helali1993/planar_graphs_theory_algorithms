@@ -8,6 +8,16 @@ g = Graph()
 u = Vertex(name=1)
 v = Vertex(name=2)
 
-edge = Edge(u, v)
+# edge = Edge(u, v)
 
-g.add_edge_class(edge)
+# g.add_edge_class(edge)
+
+
+adj_dict = { '1' : set(('2', '3')), '2': set('1'), '3': set('1'), '4' : set('5'), '5': set('4')}
+
+g.create_from_adjaceny_dict(adj_dict)
+
+for vx in g.vertices:
+    print(vx.get_name())
+
+print("End")
