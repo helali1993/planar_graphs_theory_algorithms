@@ -1,3 +1,4 @@
+import copy
 from Edge import Edge
 from Vertex import Vertex
 
@@ -29,6 +30,27 @@ class Graph(object):
                     pass
                 else:
                     self.edges.append(Edge(start_vx, end_vx))
+
+    def create_adjaceny_dict(self):
+        pass
+
+    def create_from_adjaceny_matrix(self, adj):
+        pass
+
+    def dfs(self):
+        joker_vxs = copy.deepcopy(self.vertices)
+        components = []
+
+        for vx in self.vertices:
+            if vx in joker_vxs:
+                pass # dfs_helper()
+    
+
+    def dfs_helper(self, vx, joker_vxs):
+
+        component = []
+
+
                 
             
 
